@@ -1,0 +1,15 @@
+{
+  "name": "challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:uitest": "cypress run --spec 'cypress/integration/e2e/*.cy.js'",
+    "cy:apitest": "cypress run --spec 'cypress/integration/api/*.cy.js'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^10.4.0"
+  }
+}
