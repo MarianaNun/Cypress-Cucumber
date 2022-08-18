@@ -3,5 +3,6 @@ cypress/videos
 cypress/screenshots
 cypress/cucumber-json/*
 cypress/.run/*
-cypress/reports/cucumber-html/*
+reports/*
 cypress/results/*
+package-lock.json
