@@ -4,7 +4,7 @@ import '../../../support/commands'
 let lang;
 
 Given('I am on the {string} configuration page', (page) => {
-    cy.visit('/');
+    cy.visit('');
     cy.get('[class*="header"] [class*="menu"]').first().click({force: true});
     cy.get(`a[href$="${page}"]`).last().click();
 })

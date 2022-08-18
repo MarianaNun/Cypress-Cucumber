@@ -1,6 +1,14 @@
 # cypress-cucumber-example
 Initial example of using Cypress with Cucumber.
 
+# Install
+
+Install with [npm](https://www.npmjs.com/):
+
+```sh
+$ npm install
+```
+
 # Run tests
 # Run in Cypress UI
 ```
