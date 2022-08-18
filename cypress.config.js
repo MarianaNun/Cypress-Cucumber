@@ -1,4 +1,5 @@
 const { defineConfig } = require("cypress");
+const cucumber = require('cypress-cucumber-preprocessor').default
 
 module.exports = defineConfig({
   e2e: {
@@ -9,12 +10,14 @@ module.exports = defineConfig({
           console.log(message)
           return null
         },
-      })
+      }),
+      on('file:preprocessor', cucumber())
       },
     
     baseUrl: 'https://duckduckgo.com',
     screenshotOnRunFailure: true,
-    specPattern:["**/*.cy.js"]
+    //specPattern:["**/*.cy.js"],
+    specPattern: "**/*.feature",
   },
   env: {
     API_URL: 'https://api.duckduckgo.com/'
