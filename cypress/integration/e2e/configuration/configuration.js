@@ -11,8 +11,6 @@ Given('I am on the {string} configuration page', (page) => {
 
 When('I select the Terminal theme', () => {
     cy.get('[data-theme-id="t"] label').first().click();
-    //this action was remove because on the search page the black baground is not visisble
-    //cy.get('.set-main-footer a').click()
 })
 
 Then('the background color change', () => {

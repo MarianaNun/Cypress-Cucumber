@@ -1,5 +1,6 @@
 const { defineConfig } = require("cypress");
 const cucumber = require('cypress-cucumber-preprocessor').default
+const { exec, spawn } = require('child_process')
 
 module.exports = defineConfig({
   e2e: {
@@ -11,7 +12,10 @@ module.exports = defineConfig({
           return null
         },
       }),
-      on('file:preprocessor', cucumber())
+      on('file:preprocessor', cucumber()),
+      on('after:run', () => {
+        exec('node cucumber-html-report.js');
+      })
       },
     
     baseUrl: 'https://duckduckgo.com',
