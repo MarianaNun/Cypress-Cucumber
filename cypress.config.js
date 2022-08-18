@@ -1,6 +1,6 @@
 const { defineConfig } = require("cypress");
 const cucumber = require('cypress-cucumber-preprocessor').default
-const { exec, spawn } = require('child_process')
+const { exec } = require('child_process')
 
 module.exports = defineConfig({
   e2e: {
