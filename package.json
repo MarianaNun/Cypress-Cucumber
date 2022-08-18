@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cy:uitest": "cypress run --spec 'cypress/integration/e2e/*.cy.js'",
-    "cy:apitest": "cypress run --spec 'cypress/integration/api/*.cy.js'"
+    "cy:uitest": "cypress run --spec 'cypress/integration/e2e/*.feature'",
+    "cy:apitest": "cypress run --spec 'cypress/integration/api/*.feature'"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true

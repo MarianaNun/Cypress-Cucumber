@@ -10,7 +10,7 @@ When('I search {string}', (searchString) => {
 })
 
 Then('I see an image related to the search among the results', () => {
-    cy.get(`.results--sidebar a[href*="${searchTerm}"] img.module--about__img`)
+    cy.get(`.results--sidebar a[href*="${searchTerm.replace(" ", "_")}"] img.module--about__img`)
     .should('be.visible')
 })
 
