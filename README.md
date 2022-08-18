@@ -18,8 +18,7 @@ npx cypress open
 # Run in terminal
 ```
 npx cypress run
-npm cy:uitest
-npm cy:apitest
+```
 
 ```UI
 npm run cy:uitest
