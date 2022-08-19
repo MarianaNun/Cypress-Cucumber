@@ -1,5 +1,6 @@
 const { defineConfig } = require("cypress");
 const cucumber = require('cypress-cucumber-preprocessor').default
+const fs = require('fs');
 const { exec } = require('child_process')
 
 module.exports = defineConfig({
@@ -13,8 +14,12 @@ module.exports = defineConfig({
         },
       }),
       on('file:preprocessor', cucumber()),
-      on('after:run', () => {
-        exec('node cucumber-html-report.js');
+      on('after:run', (results) => {
+        if (results) {
+          fs.mkdirSync("cypress/.run", { recursive: true });
+          fs.writeFile("cypress/.run/results.json", JSON.stringify(results));
+          exec('node cucumber-html-report.js');
+        }
       })
       },
     

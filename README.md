@@ -20,11 +20,13 @@ npx cypress open
 npx cypress run
 ```
 
-```UI
+UI
+```
 npm run cy:uitest
 ```
 
-```API
+API
+```
 npm run cy:apitest
 ```
 
